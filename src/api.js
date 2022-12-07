@@ -29,6 +29,7 @@ bleSerial.on("connected", (val) => {
 });
 
 bleSerial.on("data", (data) => console.log(`data: ${String(data)}`));
+bleSerial.on("stateChange", (state)) => console.log(`state change ${String(state)}`);
 
 // app router
 router.get("/status", (ctx) => {
