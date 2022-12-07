@@ -31,6 +31,7 @@ bleSerial.on("connected", (val) => {
 bleSerial.on("data", (data) => console.log(`data: ${String(data)}`));
 bleSerial.on("disconnected", () => {
   console.log("API Disconnected");
+  bleSerial.reset();
 });
 
 // app router
