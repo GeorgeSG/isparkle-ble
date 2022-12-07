@@ -1,15 +1,20 @@
 {
   "name": "isparkle-ble",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Custom controller for iSparkle LED Christmas lights.",
-  "main": "isparkle-ble.js",
   "scripts": {
-    "start": "node examples/cli/cli.js",
-    "start.api": "node examples/api/api.js"
+    "start:cli": "node ./src/cli.js",
+    "start:api": "node ./src/api.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@abandonware/noble": "^1.9.2-15"
+    "@abandonware/noble": "^1.9.2-15",
+    "@koa/router": "^12.0.0",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-logger": "^3.2.1",
+    "koa-route": "^3.2.0",
+    "koa2-cors": "^2.0.6"
   }
 }
