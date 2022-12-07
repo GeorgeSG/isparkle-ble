@@ -148,6 +148,12 @@ class BleUart extends EventEmitter {
   disconnect = () => {
     this.connected = false;
     console.log("Disconnected.");
+    if (this.peripheral) {
+      console.log("Attempting to reconnect");
+      this.peripheral.connect();
+    } else {
+      console.log("Peripheral unavailable");
+    }
     this.emit("disconnected");
   };
 }
