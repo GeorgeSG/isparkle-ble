@@ -147,6 +147,8 @@ class BleUart extends EventEmitter {
   // the BLE disconnect function:
   disconnect = () => {
     this.connected = false;
+    console.log("Disconnected.");
+    this.emit("disconnected");
   };
 }
 
